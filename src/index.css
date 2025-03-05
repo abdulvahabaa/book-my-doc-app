@@ -1,3 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
 @import "tailwindcss";
+
+@keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-scroll {
+    display: inline-flex;
+    min-width: max-content;
+    animation: scroll 20s linear infinite;
+  }
+  
