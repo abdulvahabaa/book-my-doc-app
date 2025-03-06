@@ -7,6 +7,7 @@ import DoctorsCard from "../components/DoctorsCard/DoctorsCard";
 import Footer from "../components/Footer.jsx/Footer";
 import ClinicsCard from "../components/ClinicsCard/ClinicsCard";
 import HospitalsCard from "../components/HospitalsCard/HospitalsCard";
+import Banner from "../components/Banners/Banner";
 
 const Home = () => {
   return (
@@ -15,7 +16,9 @@ const Home = () => {
       <div className="pt-16">
         <SubNavbar />
       </div>
+        <Banner />
       <main className="p-3">
+        {/* <Title>Welcome to Book My Doc</Title> */}
         <Title>Choose Your Department</Title>
         <DepartmentsCarosel />
         <Title>Near by Doctors...</Title>

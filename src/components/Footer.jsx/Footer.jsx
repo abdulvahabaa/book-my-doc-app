@@ -7,7 +7,11 @@ import {
   FaBullhorn,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { MdOutlineLiveHelp, MdOutlineConfirmationNumber } from "react-icons/md"; // Icons for FAQ and Resend Confirmation
+import {
+  MdOutlineLiveHelp,
+  MdOutlineConfirmationNumber,
+  MdReportProblem,
+} from "react-icons/md";
 
 const Footer = () => {
   return (
@@ -32,7 +36,7 @@ const Footer = () => {
 
       {/* New Gray Section with Big Icons */}
       <div className="bg-gray-800 py-6">
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
           {/* Customer Care */}
           <div className="flex flex-col items-center space-y-2">
             <div className="w-16 h-16 flex items-center justify-center rounded-full bg-gray-700 text-white text-3xl">
@@ -57,6 +61,14 @@ const Footer = () => {
             <p className="text-white text-lg font-medium">
               Resend Confirmation
             </p>
+          </div>
+
+          {/* Raise a Complaint */}
+          <div className="flex flex-col items-center space-y-2">
+            <div className="w-16 h-16 flex items-center justify-center rounded-full bg-gray-700 text-white text-3xl">
+              <MdReportProblem /> {/* Complaint icon */}
+            </div>
+            <p className="text-white text-lg font-medium">Raise a Complaint</p>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { clinicsList } from '../../constants/data'
 import { FaPhoneAlt, FaMapMarkerAlt, FaMapSigns, FaStar, FaHeart } from 'react-icons/fa'
 
