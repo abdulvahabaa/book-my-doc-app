@@ -90,6 +90,16 @@ const DoctorsPage = () => {
                   ))}
                 </div>
               </AccordionFilter>
+
+              {/* Browse by Clinics Button */}
+              <div className="mt-4">
+                <button
+                  className="w-full border border-amber-500 text-amber-500 py-2 rounded font-medium text-sm transition cursor-pointer hover:bg-amber-500 hover:text-white"
+                  onClick={() => console.log("Browse by Clinics clicked")}
+                >
+                  Browse by Clinics
+                </button>
+              </div>
             </div>
           </aside>
 
@@ -101,6 +111,9 @@ const DoctorsPage = () => {
             >
               <Title>Doctors in {location}...</Title>
             </h2>
+            <div>
+              
+            </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {doctorsList.map((doctor) => (
