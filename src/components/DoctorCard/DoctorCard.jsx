@@ -2,15 +2,7 @@ import React, { useState } from 'react'
 import { FaStar, FaHeart } from 'react-icons/fa'
 import { doctorsList } from '../../constants/data'
 
-const DoctorsCard = () => {
-  return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-3">
-      {doctorsList.map((doctor) => (
-        <DoctorCard key={doctor.name} doctor={doctor} />
-      ))}
-    </div>
-  )
-}
+
 
 const DoctorCard = ({ doctor }) => {
   const [showTooltip, setShowTooltip] = useState(false)
@@ -64,4 +56,4 @@ const DoctorCard = ({ doctor }) => {
   )
 }
 
-export default DoctorsCard
+export default DoctorCard

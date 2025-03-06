@@ -3,11 +3,13 @@ import Navbar from "../components/Navbar/Navbar";
 import SubNavbar from "../components/SubNavbar/SubNavbar";
 import Title from "../ui/Title";
 import DepartmentsCarosel from "../components/DepartmentsCarosel/DepartmentsCarosel";
-import DoctorsCard from "../components/DoctorsCard/DoctorsCard";
+import DoctorsCard from "../components/DoctorCard/DoctorCard";
 import Footer from "../components/Footer.jsx/Footer";
 import ClinicsCard from "../components/ClinicsCard/ClinicsCard";
 import HospitalsCard from "../components/HospitalsCard/HospitalsCard";
 import Banner from "../components/Banners/Banner";
+import { doctorsList } from "../constants/data";
+import DoctorCard from "../components/DoctorCard/DoctorCard";
 
 const Home = () => {
   return (
@@ -35,7 +37,11 @@ const Home = () => {
           <h2 id="doctors-section">
             <Title>Nearby Doctors</Title>
           </h2>
-          <DoctorsCard />
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-3">
+            {doctorsList.map((doctor) => (
+              <DoctorCard key={doctor.name} doctor={doctor} />
+            ))}
+          </div>
         </section>
 
         <section className="p-3" aria-labelledby="clinics-section">
