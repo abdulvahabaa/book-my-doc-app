@@ -17,8 +17,8 @@ const Navbar = () => {
             <h1 className="text-xl font-bold text-gray-800 dark:text-white">Book My Doc</h1>
           </div>
 
-          {/* Search Bar - Takes 2/3 width */}
-          <div className="relative" style={{ flex: "0 0 66.666%" }}>
+          {/* Search Bar - Responsive width */}
+          <div className="relative w-1/2 md:w-2/3">
             <FcSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl" />
             <input 
               type="text" 
@@ -29,8 +29,7 @@ const Navbar = () => {
         </div>
 
         {/* Right Section - Location Dropdown and Login */}
-        <div className="flex items-center space-x-6 ml-4">
-
+        <div className="flex items-center space-x-4 ml-4">
           {/* Location Dropdown */}
           <select 
             value={location}
