@@ -12,25 +12,50 @@ import Banner from "../components/Banners/Banner";
 const Home = () => {
   return (
     <div className="dark:bg-gray-900">
-      <Navbar />
-      <div className="pt-16">
-        <SubNavbar />
-      </div>
-        <Banner />
-      <main className="p-3">
-        {/* <Title>Welcome to Book My Doc</Title> */}
-        <Title>Choose Your Department</Title>
-        <DepartmentsCarosel />
-        <Title>Near by Doctors...</Title>
-        <DoctorsCard />
-        <Title>Near by Clinics...</Title>
-        <ClinicsCard />
-        <Title>Near by Hospitals...</Title>
-        <HospitalsCard />
+      <header>
+        <Navbar />
+        <div className="pt-16">
+          <SubNavbar />
+        </div>
+      </header>
+
+      <main>
+        <section aria-labelledby="home-banner">
+          <Banner />
+        </section>
+
+        <section className="p-3" aria-labelledby="departments-section">
+          <h2 id="departments-section">
+            <Title>Nearby Departments</Title>
+          </h2>
+          <DepartmentsCarosel />
+        </section>
+
+        <section className="p-3" aria-labelledby="doctors-section">
+          <h2 id="doctors-section">
+            <Title>Nearby Doctors</Title>
+          </h2>
+          <DoctorsCard />
+        </section>
+
+        <section className="p-3" aria-labelledby="clinics-section">
+          <h2 id="clinics-section">
+            <Title>Nearby Clinics</Title>
+          </h2>
+          <ClinicsCard />
+        </section>
+
+        <section className="p-3" aria-labelledby="hospitals-section">
+          <h2 id="hospitals-section">
+            <Title>Nearby Hospitals</Title>
+          </h2>
+          <HospitalsCard />
+        </section>
       </main>
-      <div >
+
+      <footer>
         <Footer />
-      </div>
+      </footer>
     </div>
   );
 };

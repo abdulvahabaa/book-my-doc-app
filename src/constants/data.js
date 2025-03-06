@@ -44,6 +44,33 @@ export const doctorsList = [
       likes: 295,
       image: '/images/doctor.jpg'
     },
+    {
+      id: 6,
+      name: 'Dr. Sarah Johnson',
+      department: 'Gynecology',
+      qualification: 'MBBS, MD (Gynecology)',
+      rating: 9.1,
+      likes: 360,
+      image: '/images/doctor.jpg'
+    },
+    {
+      id: 7,
+      name: 'Dr. Michael Smith',
+      department: 'ENT',
+      qualification: 'MBBS, MD (ENT)',
+      rating: 8.8,
+      likes: 300,
+      image: '/images/doctor.jpg'
+    },
+    {
+      id: 8,
+      name: 'Dr. Emily Brown',
+      department: 'Radiology',
+      qualification: 'MBBS, MD (Radiology)',
+      rating: 9.3,
+      likes: 375,
+      image: '/images/doctor.jpg'
+    }
   ]
 
   export const clinicsList = [
