@@ -14,6 +14,6 @@
   .animate-scroll {
     display: inline-flex;
     min-width: max-content;
-    animation: scroll 20s linear infinite;
+    animation: scroll 25s linear infinite;
   }
   
