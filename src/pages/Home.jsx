@@ -3,17 +3,16 @@ import Navbar from "../components/Navbar/Navbar";
 import SubNavbar from "../components/SubNavbar/SubNavbar";
 import Title from "../ui/Title";
 import DepartmentsCarosel from "../components/DepartmentsCarosel/DepartmentsCarosel";
-import DoctorsCard from "../components/DoctorCard/DoctorCard";
 import Footer from "../components/Footer.jsx/Footer";
-import ClinicsCard from "../components/ClinicsCard/ClinicsCard";
-import HospitalsCard from "../components/HospitalsCard/HospitalsCard";
 import Banner from "../components/Banners/Banner";
-import { doctorsList } from "../constants/data";
+import { clinicsList, doctorsList, hospitalsList } from "../constants/data";
 import DoctorCard from "../components/DoctorCard/DoctorCard";
+import ClinicCard from "../components/ClinicCard/ClinicCard";
+import HospitalCard from "../components/HospitalCard/HospitalCard";
 
 const Home = () => {
   return (
-    <div className="dark:bg-gray-900">
+    <div className="bg-gray-900 min-h-screen">
       <header>
         <Navbar />
         <div className="pt-16">
@@ -48,14 +47,22 @@ const Home = () => {
           <h2 id="clinics-section">
             <Title>Nearby Clinics</Title>
           </h2>
-          <ClinicsCard />
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-3">
+            {clinicsList.map((clinic) => (
+              <ClinicCard key={clinic.id} clinic={clinic} />
+            ))}
+          </div>
         </section>
 
         <section className="p-3" aria-labelledby="hospitals-section">
           <h2 id="hospitals-section">
             <Title>Nearby Hospitals</Title>
           </h2>
-          <HospitalsCard />
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-3">
+            {hospitalsList.map((hospital) => (
+              <HospitalCard key={hospital.id} hospital={hospital} />
+            ))}
+          </div>
         </section>
       </main>
 
