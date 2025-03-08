@@ -289,3 +289,16 @@ export const hospitalsList = [
     rating: 9.0,
   },
 ];
+
+export const departmentsArray = [
+  { name: "Pediatrics", image: "/images/caduceus-symbol.jpg" },
+  { name: "Gynecology", image: "/images/caduceus-symbol.jpg" },
+  { name: "Physician", image: "/images/caduceus-symbol.jpg" },
+  { name: "General Medicine", image: "/images/caduceus-symbol.jpg" },
+  { name: "ENT", image: "/images/caduceus-symbol.jpg" },
+  { name: "Radiology", image: "/images/caduceus-symbol.jpg" },
+  { name: "Orthopedics", image: "/images/caduceus-symbol.jpg" },
+  { name: "Cardiology", image: "/images/caduceus-symbol.jpg" },
+  { name: "Neurology", image: "/images/caduceus-symbol.jpg" },
+  { name: "Dermatology", image: "/images/caduceus-symbol.jpg" },
+];

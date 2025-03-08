@@ -43,6 +43,7 @@ const Home = () => {
           </div>
         </section>
 
+
         <section className="p-3" aria-labelledby="clinics-section">
           <h2 id="clinics-section">
             <Title>Nearby Clinics</Title>
