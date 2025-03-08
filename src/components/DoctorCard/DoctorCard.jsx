@@ -52,7 +52,7 @@ const DoctorCard = ({ doctor }) => {
 
         {/* Book Appointment Button */}
         <button className="mt-2 w-full bg-blue-500 text-white text-xs sm:text-sm py-1 rounded-full hover:bg-blue-600 transition">
-          Book Appointment
+        See More Details
         </button>
       </div>
     </div>

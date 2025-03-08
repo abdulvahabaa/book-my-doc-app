@@ -34,29 +34,46 @@ const ClinicCard = ({ clinic }) => {
       </div>
 
       {/* Clinic Info */}
-      <div className="p-2 space-y-1">
+      <div className="p-2 space-y-2">
         <h3 className="text-sm font-semibold text-gray-800 truncate">
           {clinic.name}
         </h3>
 
-        <div className="flex items-center text-xs text-gray-600">
-          <FaMapMarkerAlt className="text-red-500 mr-1" />
-          <p className="truncate">{clinic.address}</p>
+        {/* Address Section */}
+        <div className="flex items-start text-xs text-gray-600">
+          <div className="mr-2 pt-0.5">
+            <FaMapMarkerAlt className="text-red-500" />
+          </div>
+          <div className="flex flex-col">
+            <p className="whitespace-normal break-words">{clinic.address},</p>
+          </div>
         </div>
 
-        <div className="flex items-center text-xs text-gray-600">
-          <FaMapSigns className="text-orange-500 mr-1" />
-          <p className="truncate">{clinic.LandMark}</p>
+        {/* Landmark Section */}
+        <div className="flex items-start text-xs text-gray-600">
+          <div className="mr-2 pt-0.5">
+            <FaMapSigns className="text-orange-500" />
+          </div>
+          <div className="flex flex-col">
+            <p className="whitespace-normal break-words">{clinic.LandMark}</p>
+          </div>
         </div>
 
-        <div className="flex items-center text-xs text-gray-600">
-          <FaPhoneAlt className="text-green-500 mr-1" />
-          <p>{clinic.contactNumber}</p>
+        {/* Contact Number Section */}
+        <div className="flex items-start text-xs text-gray-600">
+          <div className="mr-2 pt-0.5">
+            <FaPhoneAlt className="text-green-500" />
+          </div>
+          <div className="flex flex-col">
+            <p className="whitespace-normal break-words">
+              {clinic.contactNumber}
+            </p>
+          </div>
         </div>
 
         {/* Book Appointment Button */}
         <button className="mt-2 w-full bg-blue-500 text-white text-xs py-1 rounded-full hover:bg-blue-600 transition">
-          Book Appointment
+          See More Details
         </button>
       </div>
     </div>
