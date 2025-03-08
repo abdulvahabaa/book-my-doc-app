@@ -16,7 +16,7 @@ import { AiOutlineShareAlt, AiOutlineHeart } from "react-icons/ai";
 import { FaHeart } from "react-icons/fa";
 const DoctorProfilePage = () => {
   return (
-    <div className="bg-gray-900 text-white min-h-screen font-sans">
+    <div className="bg-gray-900 text-white min-h-screen">
       {/* Header */}
       <header>
         <Navbar />

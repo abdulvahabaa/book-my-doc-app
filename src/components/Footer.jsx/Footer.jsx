@@ -15,7 +15,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 pt-4">
+    <div className="bg-gray-900 text-gray-300 pt-4">
       {/* Listing Section */}
       <div className="bg-amber-300 py-4">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between text-center md:text-left space-y-3 md:space-y-0">
@@ -195,7 +195,7 @@ const Footer = () => {
           © {new Date().getFullYear()} HealthCare Co. All Rights Reserved.
         </div>
       </div>
-    </footer>
+    </div>
   );
 };
 
