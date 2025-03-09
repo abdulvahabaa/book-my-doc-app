@@ -56,7 +56,7 @@ const DoctorProfilePage = () => {
               <div className="flex flex-row items-center gap-4">
                 <figure>
                   <img
-                    src="/public/images/caduceus-symbol.jpg"
+                    src="/images/caduceus-symbol.jpg"
                     alt="Medical Caduceus Symbol"
                     className="w-15 h-15 rounded-full border-2 border-white"
                   />
