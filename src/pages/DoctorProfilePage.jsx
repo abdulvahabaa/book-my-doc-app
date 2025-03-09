@@ -3,15 +3,15 @@ import Navbar from "../components/Navbar/Navbar";
 import SubNavbar from "../components/SubNavbar/SubNavbar";
 import Footer from "../components/Footer.jsx/Footer";
 import Title from "../ui/Title";
-import DoctorCard from "../components/DoctorCard/DoctorCard";
+import DoctorCard from "../ui/DoctorCard";
 import {
   doctorProfileData,
   clinicsList,
   hospitalsList,
   doctorsList,
 } from "../constants/data";
-import HospitalCard from "../components/HospitalCard/HospitalCard";
-import ClinicCard from "../components/ClinicCard/ClinicCard";
+import HospitalCard from "../ui/HospitalCard";
+import ClinicCard from "../ui/ClinicCard";
 import { AiOutlineShareAlt, AiOutlineHeart } from "react-icons/ai";
 import { FaHeart } from "react-icons/fa";
 const DoctorProfilePage = () => {

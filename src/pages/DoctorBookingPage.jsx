@@ -6,7 +6,7 @@ import { doctorProfileData } from "../constants/data";
 import { FaChevronLeft, FaChevronRight, FaHeart } from "react-icons/fa";
 import { MdCancel, MdInfo } from "react-icons/md";
 
-const BookingPage = () => {
+const DoctorBookingPage = () => {
   const [showFilters, setShowFilters] = useState(false);
 
   return (
@@ -216,4 +216,4 @@ const BookingPage = () => {
   );
 };
 
-export default BookingPage;
+export default DoctorBookingPage;

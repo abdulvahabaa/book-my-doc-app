@@ -6,9 +6,9 @@ import DepartmentsCarosel from "../components/DepartmentsCarosel/DepartmentsCaro
 import Footer from "../components/Footer.jsx/Footer";
 import Banner from "../components/Banners/Banner";
 import { clinicsList, doctorsList, hospitalsList } from "../constants/data";
-import DoctorCard from "../components/DoctorCard/DoctorCard";
-import ClinicCard from "../components/ClinicCard/ClinicCard";
-import HospitalCard from "../components/HospitalCard/HospitalCard";
+import DoctorCard from "../ui/DoctorCard";
+import ClinicCard from "../ui/ClinicCard";
+import HospitalCard from "../ui/HospitalCard";
 
 const Home = () => {
   return (
@@ -42,7 +42,6 @@ const Home = () => {
             ))}
           </div>
         </section>
-
 
         <section className="p-3" aria-labelledby="clinics-section">
           <h2 id="clinics-section">

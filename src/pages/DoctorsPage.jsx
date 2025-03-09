@@ -3,10 +3,10 @@ import Navbar from "../components/Navbar/Navbar";
 import SubNavbar from "../components/SubNavbar/SubNavbar";
 import Footer from "../components/Footer.jsx/Footer";
 import Title from "../ui/Title";
-import DoctorCard from "../components/DoctorCard/DoctorCard";
+import DoctorCard from "../ui/DoctorCard";
 import { clinicsList, doctorsList } from "../constants/data";
 import AccordionFilter from "../components/AccordionFilter/AccordionFilter";
-import ClinicCard from "../components/ClinicCard/ClinicCard";
+import ClinicCard from "../ui/ClinicCard";
 
 const location = "Thrissur";
 
@@ -119,11 +119,9 @@ const DoctorsPage = () => {
               ))}
             </div>
           </section>
-
         </div>
-          <section aria-labelledby="might-like" className="mt-10">
-
-          <h2 id="might-like" >
+        <section aria-labelledby="might-like" className="mt-10">
+          <h2 id="might-like">
             <Title>Nearby Clinics</Title>
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-3">
@@ -131,14 +129,11 @@ const DoctorsPage = () => {
               <ClinicCard key={clinic.id} clinic={clinic} />
             ))}
           </div>
-
-
-          </section>
-
+        </section>
       </main>
-        <footer className="mt-12">
-          <Footer />
-        </footer>
+      <footer className="mt-12">
+        <Footer />
+      </footer>
     </div>
   );
 };
