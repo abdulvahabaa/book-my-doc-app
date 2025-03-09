@@ -3,7 +3,8 @@ import Navbar from "../components/Navbar/Navbar";
 import SubNavbar from "../components/SubNavbar/SubNavbar";
 import Footer from "../components/Footer.jsx/Footer";
 import { doctorProfileData } from "../constants/data";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight, FaHeart } from "react-icons/fa";
+import { MdCancel, MdInfo } from "react-icons/md";
 
 const BookingPage = () => {
   const [showFilters, setShowFilters] = useState(false);
@@ -128,11 +129,57 @@ const BookingPage = () => {
               </div>
             ))}
           </div>
-          <div className="border-t border-gray-600 "></div>
+          <div className="border-t border-gray-600 my-2"></div>
+
+          <div className="container mx-auto  grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div className="flex flex-row gap-2 items-center">
+              <div className="px-2">
+                <FaHeart className="text-red-500 cursor-pointer" />
+              </div>
+              <div>
+                <h3>Doctors clinic , address,pin ,</h3>
+              </div>
+              <div>
+                {" "}
+                <button className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition">
+                  <MdInfo /> More Info
+                </button>
+              </div>
+            </div>
+            <div>
+              <div className="flex gap-2 flex-wrap">
+                {[
+                  "10:00 AM",
+                  "11:30 AM",
+                  "2:00 PM",
+                  "3:30 PM",
+                  "5:00 PM",
+                  "6:30 PM",
+                  "8:00 PM",
+                  "9:30 PM",
+                  "11:00 PM",
+                  "12:30 AM",
+                ].map((slot, index) => (
+                  <button
+                    key={index}
+                    className="border  border-green-500 text-green-500 px-6 py-1 text-sm rounded-md  hover:bg-green-500 hover:text-white transition"
+                  >
+                    {slot}
+                  </button>
+                ))}
+              </div>
+              <div>
+                <p className="text-white text-xs flex items-center gap-2 mt-3">
+                  <MdCancel /> Cancellation Available
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-600 my-3"></div>
         </section>
 
         {/* Time Slots */}
-        
       </main>
 
       {/* Footer */}
