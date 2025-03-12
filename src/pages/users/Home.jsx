@@ -1,14 +1,14 @@
 import React from "react";
-import Navbar from "../components/Navbar/Navbar";
-import SubNavbar from "../components/SubNavbar/SubNavbar";
-import Title from "../ui/Title";
-import DepartmentsCarosel from "../components/DepartmentsCarosel/DepartmentsCarosel";
-import Footer from "../components/Footer.jsx/Footer";
-import Banner from "../components/Banners/Banner";
-import { clinicsList, doctorsList, hospitalsList } from "../constants/data";
-import DoctorCard from "../ui/DoctorCard";
-import ClinicCard from "../ui/ClinicCard";
-import HospitalCard from "../ui/HospitalCard";
+import Navbar from "../../components/users/Navbar/Navbar";
+import SubNavbar from "../../components/users/SubNavbar/SubNavbar";
+import Title from "../../ui/Title";
+import DepartmentsCarosel from "../../components/users/DepartmentsCarosel/DepartmentsCarosel";
+import Footer from "../../components/users/Footer.jsx/Footer";
+import Banner from "../../components/users/Banners/Banner";
+import { clinicsList, doctorsList, hospitalsList } from "../../constants/data";
+import DoctorCard from "../../ui/DoctorCard";
+import ClinicCard from "../../ui/ClinicCard";
+import HospitalCard from "../../ui/HospitalCard";
 
 const Home = () => {
   return (

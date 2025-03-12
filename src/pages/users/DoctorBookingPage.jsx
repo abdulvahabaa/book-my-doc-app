@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar/Navbar";
-import SubNavbar from "../components/SubNavbar/SubNavbar";
-import Footer from "../components/Footer.jsx/Footer";
-import { doctorProfileData } from "../constants/data";
+import Navbar from "../../components/users/Navbar/Navbar";
+import SubNavbar from "../../components/users/SubNavbar/SubNavbar";
+import Footer from "../../components/users/Footer.jsx/Footer";
+import { doctorProfileData } from "../../constants/data";
 import { FaChevronLeft, FaChevronRight, FaHeart } from "react-icons/fa";
 import { MdCancel, MdInfo } from "react-icons/md";
 
@@ -27,7 +27,7 @@ const DoctorBookingPage = () => {
             {/* Doctor Image */}
             <figure>
               <img
-                src="/public/images/caduceus-symbol.jpg"
+                src="/images/caduceus-symbol.jpg"
                 alt="Medical Caduceus Symbol"
                 className="w-14 h-14 md:w-20 md:h-20 rounded-full border-2 border-white"
               />

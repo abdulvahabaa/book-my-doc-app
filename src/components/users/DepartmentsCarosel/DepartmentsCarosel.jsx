@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { departmentsArray } from "../../constants/data";
+import { departmentsArray } from "../../../constants/data";
 
 // Duplicate list for seamless scrolling
 const infiniteDepartments = [...departmentsArray, ...departmentsArray];

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar/Navbar";
-import SubNavbar from "../components/SubNavbar/SubNavbar";
-import Footer from "../components/Footer.jsx/Footer";
-import Title from "../ui/Title";
-import DoctorCard from "../ui/DoctorCard";
-import { clinicsList, doctorsList } from "../constants/data";
-import AccordionFilter from "../components/AccordionFilter/AccordionFilter";
-import ClinicCard from "../ui/ClinicCard";
+import Navbar from "../../components/users/Navbar/Navbar";
+import SubNavbar from "../../components/users/SubNavbar/SubNavbar";
+import Footer from "../../components/users/Footer.jsx/Footer";
+import Title from "../../ui/Title";
+import DoctorCard from "../../ui/DoctorCard";
+import { clinicsList, doctorsList } from "../../constants/data";
+import AccordionFilter from "../../components/common/AccordionFilter/AccordionFilter";
+import ClinicCard from "../../ui/ClinicCard";
 
 const location = "Thrissur";
 
