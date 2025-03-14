@@ -7,6 +7,7 @@ import DoctorCard from "../../ui/DoctorCard";
 import { clinicsList, doctorsList } from "../../constants/data";
 import AccordionFilter from "../../components/common/AccordionFilter/AccordionFilter";
 import ClinicCard from "../../ui/ClinicCard";
+import SwiperCarousel from "../../components/common/SwiperCarousel/SwiperCarousel";
 
 const location = "Thrissur";
 
@@ -120,7 +121,7 @@ const DoctorsPage = () => {
             </div>
           </section>
         </div>
-        <section aria-labelledby="might-like" className="mt-10">
+        {/* <section aria-labelledby="might-like" className="mt-10">
           <h2 id="might-like">
             <Title>Nearby Clinics</Title>
           </h2>
@@ -129,6 +130,22 @@ const DoctorsPage = () => {
               <ClinicCard key={clinic.id} clinic={clinic} />
             ))}
           </div>
+
+        </section> */}
+
+        <section aria-labelledby="might-like" className="mt-10">
+          <h2 id="might-like">
+            <Title>Nearby Clinics</Title>
+          </h2>
+   
+          <SwiperCarousel
+            items={clinicsList}
+            renderItem={(clinic) => (
+              <ClinicCard key={clinic.id} clinic={clinic} />
+            )}
+          />
+
+     
         </section>
       </main>
       <footer className="mt-12">

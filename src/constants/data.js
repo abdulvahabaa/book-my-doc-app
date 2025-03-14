@@ -235,6 +235,47 @@ export const clinicsList = [
     likes: 190, // Add this
     rating: 8.9, // Add this
   },
+  {
+    id: 6,
+    name: "Clinic 6",
+    address: "987 Maple Street, City",
+    LandMark: "Near Hospital",
+    image: "/images/clinic.jpg",
+    contactNumber: "999-999-9999",
+    likes: 220, // Add this
+    rating: 8.4, // Add this
+  },
+  {
+    id: 7,
+    name: "Clinic 7",
+    address: "543 Oak Street, City",
+    LandMark: "Near Hospital",
+    image: "/images/clinic.jpg",
+    contactNumber: "666-666-6666",
+    likes: 180, // Add this
+    rating: 8.5, // Add this
+  },
+  {
+    id: 8,
+    name: "Clinic 8",
+    address: "987 Pine Street, City",
+    LandMark: "Near Hospital",
+    image: "/images/clinic.jpg",
+    contactNumber: "444-444-4444",
+    likes: 190, // Add this
+    rating: 8.7, // Add this
+  },
+  {
+    id: 9,
+    name: "Clinic 9",
+    address: "654 Cedar Street, City",
+    LandMark: "Near Hospital",
+    image: "/images/clinic.jpg",
+    contactNumber: "333-333-3333",
+    likes: 200, // Add this
+    rating: 8.6, // Add this
+  },
+ 
 ];
 
 export const hospitalsList = [
