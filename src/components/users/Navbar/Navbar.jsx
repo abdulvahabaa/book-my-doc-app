@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import AuthModal from "../../common/AuthModal/AuthModal";
 import { GiStethoscope } from "react-icons/gi";
 import { FcSearch } from "react-icons/fc";
+import { FaRegHeart, FaUserCircle } from "react-icons/fa";
 
 const Navbar = () => {
   const [location, setLocation] = useState("Thrissur");
@@ -28,8 +29,8 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Right Section - Location Dropdown and Login */}
-          <div className="flex items-center space-x-4 ml-4">
+          {/* Right Section - Location Dropdown, Wishlist, Profile & Login */}
+          <div className="flex items-center space-x-6 ml-4">
             {/* Location Dropdown */}
             <select
               value={location}
@@ -41,6 +42,18 @@ const Navbar = () => {
               <option value="Trivandrum">Trivandrum</option>
               <option value="Calicut">Calicut</option>
             </select>
+
+            {/* Wishlist Icon with Notification Badge */}
+            <div className="relative cursor-pointer text-gray-800 dark:text-white">
+              <FaRegHeart className="text-2xl" />
+              <span className="absolute -top-1 -right-2 flex size-3">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75"></span>
+                <span className="relative inline-flex size-3 rounded-full bg-red-500"></span>
+              </span>
+            </div>
+
+            {/* User Profile Icon */}
+            <FaUserCircle className="text-3xl cursor-pointer text-gray-800 dark:text-white" />
 
             {/* Login Button */}
             <button
