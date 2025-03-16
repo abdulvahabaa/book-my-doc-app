@@ -3,7 +3,7 @@ import Navbar from "../../components/users/Navbar/Navbar";
 import SubNavbar from "../../components/users/SubNavbar/SubNavbar";
 import Title from "../../ui/Title";
 import DepartmentsCarosel from "../../components/users/DepartmentsCarosel/DepartmentsCarosel";
-import Footer from "../../components/users/Footer.jsx/Footer";
+import Footer from "../../components/users/Footer/Footer";
 import Banner from "../../components/users/Banners/Banner";
 import { clinicsList, doctorsList, hospitalsList } from "../../constants/data";
 import DoctorCard from "../../ui/DoctorCard";

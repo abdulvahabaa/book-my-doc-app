@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../components/users/Navbar/Navbar";
 import SubNavbar from "../../components/users/SubNavbar/SubNavbar";
-import Footer from "../../components/users/Footer.jsx/Footer";
+import Footer from "../../components/users/Footer/Footer";
 import { doctorProfileData } from "../../constants/data";
 import { FaChevronLeft, FaChevronRight, FaHeart } from "react-icons/fa";
 import { MdCancel, MdInfo } from "react-icons/md";

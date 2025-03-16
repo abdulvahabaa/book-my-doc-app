@@ -1,20 +1,29 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/users/Home";
-import DoctorsPage from "./pages/users/DoctorsPage";
-import DoctorProfilePage from "./pages/users/DoctorProfilePage";
-import DoctorBookingPage from "./pages/users/DoctorBookingPage";
-import BookingPage from "./pages/users/BookingPage";
+import UserRoutes from "./routes/UserRoutes";
+import DoctorRoutes from "./routes/DoctorRoutes";
+import NotFound from "./pages/common/NotFound";
+// import AdminRoutes from "./routes/AdminRoutes";
+// import ProtectedRoute from "./routes/ProtectedRoute";
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/doctors" element={<DoctorsPage />} />
-        <Route path="/doctors/profile" element={<DoctorProfilePage />} />
-        <Route path="/doctors/profile/book" element={<DoctorBookingPage />} />
-        <Route path="/doctors/profile/book/create" element={<BookingPage />} />
+        {/* Public Routes */}
+        <Route path="/*" element={<UserRoutes />} />
+
+        {/* Protected Routes */}
+        {/* <Route element={<ProtectedRoute allowedRoles={['doctor']} />}> */}
+        <Route path="/doctor/*" element={<DoctorRoutes />} />
+        {/* </Route> */}
+
+        {/* <Route element={<ProtectedRoute allowedRoles={['admin']} />}>
+          <Route path="/admin/*" element={<AdminRoutes />} />
+        </Route> */}
+
+        {/* Catch-All Route for 404 Not Found */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

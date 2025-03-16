@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../components/users/Navbar/Navbar";
 import SubNavbar from "../../components/users/SubNavbar/SubNavbar";
-import Footer from "../../components/users/Footer.jsx/Footer";
+import Footer from "../../components/users/Footer/Footer";
 import Title from "../../ui/Title";
 import DoctorCard from "../../ui/DoctorCard";
 import {

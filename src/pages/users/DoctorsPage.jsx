@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../components/users/Navbar/Navbar";
 import SubNavbar from "../../components/users/SubNavbar/SubNavbar";
-import Footer from "../../components/users/Footer.jsx/Footer";
+import Footer from "../../components/users/Footer/Footer";
 import Title from "../../ui/Title";
 import DoctorCard from "../../ui/DoctorCard";
 import { clinicsList, doctorsList } from "../../constants/data";
@@ -137,15 +137,13 @@ const DoctorsPage = () => {
           <h2 id="might-like">
             <Title>Nearby Clinics</Title>
           </h2>
-   
+
           <SwiperCarousel
             items={clinicsList}
             renderItem={(clinic) => (
               <ClinicCard key={clinic.id} clinic={clinic} />
             )}
           />
-
-     
         </section>
       </main>
       <footer className="mt-12">
