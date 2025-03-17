@@ -5,15 +5,22 @@ import Footer from "../components/users/Footer/Footer";
 
 const UserLayout = ({ children }) => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="bg-gray-900 min-h-screen">
       {/* Top Navigation Bar */}
-      <Navbar />
+      <header>
+        <Navbar />
+        <div className="pt-16">
+          <SubNavbar />
+        </div>
+      </header>
 
       {/* Main Content Area */}
-      <main className="flex-grow container mx-auto p-4">{children}</main>
+      <main>{children}</main>
 
       {/* Footer */}
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };

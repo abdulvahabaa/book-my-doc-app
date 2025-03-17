@@ -275,7 +275,6 @@ export const clinicsList = [
     likes: 200, // Add this
     rating: 8.6, // Add this
   },
- 
 ];
 
 export const hospitalsList = [
@@ -342,4 +341,12 @@ export const departmentsArray = [
   { name: "Cardiology", image: "/images/caduceus-symbol.jpg" },
   { name: "Neurology", image: "/images/caduceus-symbol.jpg" },
   { name: "Dermatology", image: "/images/caduceus-symbol.jpg" },
+];
+
+export const experienceOptions = [
+  "0-1 years",
+  "2-3 years",
+  "3-6 years",
+  "6-10 years",
+  "10+ years",
 ];

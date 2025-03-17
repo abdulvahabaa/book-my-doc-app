@@ -1,24 +1,14 @@
 import React, { useState } from "react";
-import Navbar from "../../components/users/Navbar/Navbar";
-import SubNavbar from "../../components/users/SubNavbar/SubNavbar";
-import Footer from "../../components/users/Footer/Footer";
 import Title from "../../ui/Title";
 import DoctorCard from "../../ui/DoctorCard";
 import { clinicsList, doctorsList } from "../../constants/data";
 import AccordionFilter from "../../components/common/AccordionFilter/AccordionFilter";
 import ClinicCard from "../../ui/ClinicCard";
 import SwiperCarousel from "../../components/common/SwiperCarousel/SwiperCarousel";
+import UserLayout from "../../layouts/UserLayout";
+import { experienceOptions } from "../../constants/data";
 
 const location = "Thrissur";
-
-// Experience options
-const experienceOptions = [
-  "0-1 years",
-  "2-3 years",
-  "3-6 years",
-  "6-10 years",
-  "10+ years",
-];
 
 const DoctorsPage = () => {
   const [openFilters, setOpenFilters] = useState({
@@ -36,15 +26,8 @@ const DoctorsPage = () => {
   };
 
   return (
-    <div className="bg-gray-900 min-h-screen">
-      <header>
-        <Navbar />
-        <div className="pt-16">
-          <SubNavbar />
-        </div>
-      </header>
-
-      <main className="mt-4 container mx-auto px-2">
+    <UserLayout>
+      <div className="mt-4 container mx-auto px-2">
         {/* 2 Column Grid with reduced sidebar width */}
         <div className="grid grid-cols-1 md:grid-cols-[250px_1fr] gap-6">
           <aside aria-labelledby="filter-doctor">
@@ -145,11 +128,8 @@ const DoctorsPage = () => {
             )}
           />
         </section>
-      </main>
-      <footer className="mt-12">
-        <Footer />
-      </footer>
-    </div>
+      </div>
+    </UserLayout>
   );
 };
 

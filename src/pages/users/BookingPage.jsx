@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../../components/users/Navbar/Navbar";
-import SubNavbar from "../../components/users/SubNavbar/SubNavbar";
+import UserLayout from "../../layouts/UserLayout";
 
 const BookingPage = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -19,15 +18,9 @@ const BookingPage = () => {
   };
 
   return (
-    <div className="bg-gray-900 min-h-screen text-white">
-      <header>
-        <Navbar />
-        <div className="pt-16">
-          <SubNavbar />
-        </div>
-      </header>
+    <UserLayout>
 
-      <main className="container mx-auto px-4 py-6">
+      <div className="container mx-auto px-4 py-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <section className="bg-gradient-to-r from-gray-800 to-gray-900 p-6 rounded-lg shadow-lg border border-gray-700">
             <h2 className="text-3xl font-bold mb-4 text-amber-400">Appointment Summary</h2>
@@ -104,8 +97,8 @@ const BookingPage = () => {
             )}
           </section>
         </div>
-      </main>
-    </div>
+      </div>
+      </UserLayout>
   );
 };
 

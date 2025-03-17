@@ -1,26 +1,16 @@
 import React, { useState } from "react";
-import Navbar from "../../components/users/Navbar/Navbar";
-import SubNavbar from "../../components/users/SubNavbar/SubNavbar";
-import Footer from "../../components/users/Footer/Footer";
 import { doctorProfileData } from "../../constants/data";
 import { FaChevronLeft, FaChevronRight, FaHeart } from "react-icons/fa";
 import { MdCancel, MdInfo } from "react-icons/md";
+import UserLayout from "../../layouts/UserLayout";
 
 const DoctorBookingPage = () => {
   const [showFilters, setShowFilters] = useState(false);
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen">
-      {/* Header */}
-      <header>
-        <Navbar />
-        <div className="pt-16">
-          <SubNavbar />
-        </div>
-      </header>
-
+    <UserLayout>
       {/* Main Content */}
-      <main className="container mx-auto">
+      <div className="container mx-auto">
         {/* Doctor Profile Section */}
         <section className="p-4 bg-gray-800" aria-labelledby="doctor-profile">
           <div className="flex flex-col md:flex-row items-center gap-4">
@@ -206,13 +196,8 @@ const DoctorBookingPage = () => {
           </div>
           <hr className="border-t border-gray-600 my-3" />
         </section>
-      </main>
-
-      {/* Footer */}
-      <footer>
-        <Footer />
-      </footer>
-    </div>
+      </div>
+    </UserLayout>
   );
 };
 

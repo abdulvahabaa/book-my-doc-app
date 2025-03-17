@@ -1,9 +1,5 @@
 import React from "react";
-import Navbar from "../../components/users/Navbar/Navbar";
-import SubNavbar from "../../components/users/SubNavbar/SubNavbar";
-import Footer from "../../components/users/Footer/Footer";
 import Title from "../../ui/Title";
-import DoctorCard from "../../ui/DoctorCard";
 import {
   doctorProfileData,
   clinicsList,
@@ -13,19 +9,13 @@ import HospitalCard from "../../ui/HospitalCard";
 import ClinicCard from "../../ui/ClinicCard";
 import { AiOutlineShareAlt, AiOutlineHeart } from "react-icons/ai";
 import { FaHeart } from "react-icons/fa";
+import UserLayout from "../../layouts/UserLayout";
+
 const DoctorProfilePage = () => {
   return (
-    <div className="bg-gray-900 text-white min-h-screen">
-      {/* Header */}
-      <header>
-        <Navbar />
-        <div className="pt-16">
-          <SubNavbar />
-        </div>
-      </header>
-
+    <UserLayout>
       {/* Main Content */}
-      <main className="container mx-auto">
+      <div className="container mx-auto">
         {/* Hero Banner Section */}
 
         <article
@@ -184,7 +174,7 @@ const DoctorProfilePage = () => {
         </article>
 
         {/* Doctor Details Section */}
-        <section className="mt-2 p-6">
+        <section className="mt-2 p-6 text-white">
           <h2 className="text-2xl font-bold mb-4">
             About Dr. {doctorProfileData.fullName}
           </h2>
@@ -239,13 +229,8 @@ const DoctorProfilePage = () => {
             </p>
           </div>
         </section>
-      </main>
-
-      {/* Footer */}
-      <footer className="mt-12">
-        <Footer />
-      </footer>
-    </div>
+      </div>
+    </UserLayout>
   );
 };
 

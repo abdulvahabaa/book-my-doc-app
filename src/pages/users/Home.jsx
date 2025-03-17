@@ -1,26 +1,17 @@
 import React from "react";
-import Navbar from "../../components/users/Navbar/Navbar";
-import SubNavbar from "../../components/users/SubNavbar/SubNavbar";
 import Title from "../../ui/Title";
 import DepartmentsCarosel from "../../components/users/DepartmentsCarosel/DepartmentsCarosel";
-import Footer from "../../components/users/Footer/Footer";
 import Banner from "../../components/users/Banners/Banner";
 import { clinicsList, doctorsList, hospitalsList } from "../../constants/data";
 import DoctorCard from "../../ui/DoctorCard";
 import ClinicCard from "../../ui/ClinicCard";
 import HospitalCard from "../../ui/HospitalCard";
+import UserLayout from "../../layouts/UserLayout";
 
 const Home = () => {
   return (
-    <div className="bg-gray-900 min-h-screen">
-      <header>
-        <Navbar />
-        <div className="pt-16">
-          <SubNavbar />
-        </div>
-      </header>
-
-      <main>
+    <UserLayout>
+      <div>
         <section aria-labelledby="home-banner">
           <Banner />
         </section>
@@ -64,12 +55,8 @@ const Home = () => {
             ))}
           </div>
         </section>
-      </main>
-
-      <footer>
-        <Footer />
-      </footer>
-    </div>
+      </div>
+    </UserLayout>
   );
 };
 
