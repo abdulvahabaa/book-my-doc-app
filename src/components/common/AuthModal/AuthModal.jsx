@@ -3,11 +3,45 @@ import { motion } from "framer-motion";
 import { IoClose } from "react-icons/io5";
 import { FcGoogle } from "react-icons/fc";
 import { HiOutlineMail } from "react-icons/hi";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { registerUser, loginUser } from "@/api/auth";
 
 const AuthModal = ({ isOpen, onClose }) => {
   const [isLogin, setIsLogin] = useState(true);
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+    fullName: "",
+  });
+  const [loading, setLoading] = useState(false);
 
   if (!isOpen) return null;
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      if (isLogin) {
+        await loginUser({ email: formData.email, password: formData.password });
+        toast.success("Login successful!");
+      } else {
+        await registerUser(formData);
+        toast.success("Registration successful! You can now log in.");
+        setIsLogin(true);
+      }
+      onClose();
+    } catch (error) {
+      toast.error(error.message || "Something went wrong!");
+    }
+
+    setLoading(false);
+  };
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 px-4">
@@ -31,29 +65,39 @@ const AuthModal = ({ isOpen, onClose }) => {
         </h2>
 
         {/* Form */}
-        <form className="mt-4 space-y-4">
+        <form className="mt-4 space-y-4" onSubmit={handleSubmit}>
           {!isLogin && (
             <input
               type="text"
+              name="fullName"
               placeholder="Full Name"
               className="w-full px-4 py-2 border rounded-lg outline-none dark:bg-gray-800 dark:text-white"
+              onChange={handleChange}
+              required
             />
           )}
           <input
             type="email"
+            name="email"
             placeholder="Email"
             className="w-full px-4 py-2 border rounded-lg outline-none dark:bg-gray-800 dark:text-white"
+            onChange={handleChange}
+            required
           />
           <input
             type="password"
+            name="password"
             placeholder="Password"
             className="w-full px-4 py-2 border rounded-lg outline-none dark:bg-gray-800 dark:text-white"
+            onChange={handleChange}
+            required
           />
           <button
             type="submit"
             className="w-full bg-amber-500 text-white py-2 rounded-lg hover:bg-amber-600 transition"
+            disabled={loading}
           >
-            {isLogin ? "Login" : "Sign Up"}
+            {loading ? "Processing..." : isLogin ? "Login" : "Sign Up"}
           </button>
         </form>
 
@@ -64,21 +108,14 @@ const AuthModal = ({ isOpen, onClose }) => {
           <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
         </div>
 
-        {/* Continue with Buttons */}
+        {/* Continue with Google */}
         <div className="space-y-3">
           <button className="w-full flex items-center justify-center gap-2 py-2 border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition dark:text-white">
             <FcGoogle size={20} /> Continue with Google
           </button>
-          <button className="w-full flex items-center justify-center gap-2 py-2 border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition dark:text-white">
-            <HiOutlineMail
-              size={20}
-              className="text-gray-600 dark:text-gray-300"
-            />{" "}
-            Continue with Email
-          </button>
         </div>
 
-        {/* Toggle between Login & Signup */}
+        {/* Toggle Login & Signup */}
         <p className="text-center text-sm mt-4 text-gray-600 dark:text-gray-400">
           {isLogin ? "Don't have an account?" : "Already have an account?"}
           <span

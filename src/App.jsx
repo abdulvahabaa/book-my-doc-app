@@ -5,6 +5,8 @@ import DoctorRoutes from "./routes/DoctorRoutes";
 import NotFound from "./pages/common/NotFound";
 // import AdminRoutes from "./routes/AdminRoutes";
 // import ProtectedRoute from "./routes/ProtectedRoute";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
@@ -25,6 +27,11 @@ const App = () => {
         {/* Catch-All Route for 404 Not Found */}
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+      />
     </Router>
   );
 };

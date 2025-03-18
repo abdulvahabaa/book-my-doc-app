@@ -1,5 +1,4 @@
-const API_BASE_URL =
-  process.env.REACT_APP_API_BASE_URL || "https://api.example.com";
+const API_BASE_URL = "http://localhost:9002/api";
 
 export async function apiRequest(
   endpoint,
