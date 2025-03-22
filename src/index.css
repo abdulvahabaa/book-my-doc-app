@@ -2,6 +2,8 @@
 
 @import "tailwindcss";
 
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+
 @keyframes scroll {
   from {
     transform: translateX(0);
