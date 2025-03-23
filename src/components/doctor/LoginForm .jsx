@@ -67,7 +67,7 @@ export function LoginForm({ className, ...props }) {
               {/* Divider */}
               <div className="relative text-center text-sm text-gray-500 dark:text-gray-400 before:absolute before:inset-0 before:top-1/2 before:border-t before:border-gray-300">
                 <span className="relative z-10 bg-white dark:bg-gray-900 px-2">
-                  Or 
+                  Or
                 </span>
               </div>
 
@@ -87,11 +87,11 @@ export function LoginForm({ className, ...props }) {
                 </button>
               </div> */}
 
-                 <div className="space-y-3">
-                        <button className="w-full flex items-center justify-center gap-2 py-2 border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition dark:text-white">
-                          <FcGoogle size={20} /> Continue with Google
-                        </button>
-                      </div>
+              <div className="space-y-3">
+                <button className="w-full flex items-center justify-center gap-2 py-2 border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition dark:text-white">
+                  <FcGoogle size={20} /> Continue with Google
+                </button>
+              </div>
 
               {/* Sign Up Link */}
               <div className="text-center text-sm text-gray-600 dark:text-gray-400">
@@ -106,12 +106,12 @@ export function LoginForm({ className, ...props }) {
           {/* Image Section (Hidden on Small Screens) */}
           <div className="relative hidden bg-gray-100 dark:bg-gray-800 md:block">
             <img
-                src="/public/images/doctor-symbol.jpg"
-                alt="Image"
-                className="absolute inset-0 h-full w-full object-cover dark:opacity-50"
-              />
+              src="/images/doctor-symbol.jpg"
+              alt="Image"
+              className="absolute inset-0 h-full w-full object-cover dark:opacity-50"
+            />
             {/* <img
-              src="/public/images/doctor-symbol.jpg"
+              src="/images/doctor-symbol.jpg"
               alt="Image"
               className="object-contain rounded-lg shadow-md dark:opacity-80 w-full h-full"
             /> */}
