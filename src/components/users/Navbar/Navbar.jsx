@@ -3,6 +3,7 @@ import AuthModal from "../../common/AuthModal/AuthModal";
 import { GiStethoscope } from "react-icons/gi";
 import { FcSearch } from "react-icons/fc";
 import { FaRegHeart, FaUserCircle } from "react-icons/fa";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 
 const Navbar = () => {
   const [location, setLocation] = useState("Thrissur");
@@ -50,8 +51,10 @@ const Navbar = () => {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75"></span>
                 <span className="relative inline-flex size-3 rounded-full bg-red-500"></span>
               </span>
+              
             </div>
 
+              <ThemeToggle/>
             {/* User Profile Icon */}
             <FaUserCircle className="text-3xl cursor-pointer text-gray-800 dark:text-white" />
 

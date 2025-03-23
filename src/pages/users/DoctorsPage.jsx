@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Title from "../../ui/Title";
-import DoctorCard from "../../ui/DoctorCard";
+import Title from "../../components/ui/Title";
+import DoctorCard from "../../components/ui/DoctorCard";
 import { clinicsList, doctorsList } from "../../constants/data";
 import AccordionFilter from "../../components/common/AccordionFilter/AccordionFilter";
-import ClinicCard from "../../ui/ClinicCard";
+import ClinicCard from "../../components/ui/ClinicCard";
 import SwiperCarousel from "../../components/common/SwiperCarousel/SwiperCarousel";
 import UserLayout from "../../layouts/UserLayout";
 import { experienceOptions } from "../../constants/data";

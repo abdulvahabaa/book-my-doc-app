@@ -1,11 +1,11 @@
 import React from "react";
-import Title from "../../ui/Title";
+import Title from "../../components/ui/Title";
 import DepartmentsCarosel from "../../components/users/DepartmentsCarosel/DepartmentsCarosel";
 import Banner from "../../components/users/Banners/Banner";
 import { clinicsList, doctorsList, hospitalsList } from "../../constants/data";
-import DoctorCard from "../../ui/DoctorCard";
-import ClinicCard from "../../ui/ClinicCard";
-import HospitalCard from "../../ui/HospitalCard";
+import DoctorCard from "../../components/ui/DoctorCard";
+import ClinicCard from "../../components/ui/ClinicCard";
+import HospitalCard from "../../components/ui/HospitalCard";
 import UserLayout from "../../layouts/UserLayout";
 
 const Home = () => {

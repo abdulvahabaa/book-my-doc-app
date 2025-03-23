@@ -1,12 +1,12 @@
 import React from "react";
-import Title from "../../ui/Title";
+import Title from "../../components/ui/Title";
 import {
   doctorProfileData,
   clinicsList,
   hospitalsList,
 } from "../../constants/data";
-import HospitalCard from "../../ui/HospitalCard";
-import ClinicCard from "../../ui/ClinicCard";
+import HospitalCard from "../../components/ui/HospitalCard";
+import ClinicCard from "../../components/ui/ClinicCard";
 import { AiOutlineShareAlt, AiOutlineHeart } from "react-icons/ai";
 import { FaHeart } from "react-icons/fa";
 import UserLayout from "../../layouts/UserLayout";
