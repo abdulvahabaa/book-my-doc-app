@@ -1,19 +1,27 @@
-import React, { useState } from "react";
-import { Sidebar } from "@/components/ui/DashSidebar.jsx";
-import { Navbar } from "@/components/ui/DashNavbar.jsx";
+import { useState } from "react";
+import { Sidebar } from "@/components/ui/DashSidebar";
+import { Navbar } from "@/components/ui/DashNavbar";
 
 const DashboardLayout = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   return (
-    <div className="flex h-screen w-full bg-gray-100">
+    <div className="flex w-full h-screen overflow-hidden">
+      {/* Sidebar - Fixed */}
       <Sidebar
         isOpen={isSidebarOpen}
         toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
       />
-      <div className="flex flex-col flex-1">
+
+      {/* Main Content Area */}
+      <div className="flex flex-col flex-1 transition-all duration-300">
+        {/* Navbar - Fixed at the top */}
         <Navbar toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
-        <main className="p-3">{children}</main>
+
+        {/* Scrollable Main Content */}
+        <main className={`p-2 overflow-y-auto mx-2 h-[calc(100vh-4rem)]`}>
+          {children}
+        </main>
       </div>
     </div>
   );
