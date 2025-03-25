@@ -14,6 +14,7 @@ import {
 import { MdOutlineDashboard, MdOutlineHelpOutline } from "react-icons/md";
 import { TbReportAnalytics } from "react-icons/tb";
 import { BsChevronUp, BsChevronDown } from "react-icons/bs";
+import HoverTooltip from "./Tooltip";
 
 export const Sidebar = ({ isOpen, toggleSidebar }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -38,27 +39,39 @@ export const Sidebar = ({ isOpen, toggleSidebar }) => {
       <nav className="flex-1">
         <ul>
           <li className="p-2 rounded flex items-center gap-2 hover:bg-violet-600 cursor-pointer hover:font-semibold">
-            <MdOutlineDashboard />{" "}
+            <HoverTooltip text="Dashboard">
+              <MdOutlineDashboard />
+            </HoverTooltip>
             <span className={isOpen ? "block" : "hidden"}>Dashboard</span>
           </li>
           <li className="p-2 rounded flex items-center gap-2 hover:bg-violet-600 cursor-pointer hover:font-semibold">
-            <FaChartBar />{" "}
+            <HoverTooltip text="Analytics">
+              <FaChartBar />
+            </HoverTooltip>
             <span className={isOpen ? "block" : "hidden"}>Analytics</span>
           </li>
           <li className="p-2 rounded flex items-center gap-2 hover:bg-violet-600 cursor-pointer hover:font-semibold">
-            <AiOutlineTeam />{" "}
+            <HoverTooltip text="Team">
+              <AiOutlineTeam />
+            </HoverTooltip>
             <span className={isOpen ? "block" : "hidden"}>Team</span>
           </li>
           <li className="p-2 rounded flex items-center gap-2 hover:bg-violet-600 cursor-pointer hover:font-semibold">
-            <TbReportAnalytics />{" "}
+            <HoverTooltip text="Reports">
+              <TbReportAnalytics />
+            </HoverTooltip>
             <span className={isOpen ? "block" : "hidden"}>Reports</span>
           </li>
           <li className="p-2 rounded flex items-center gap-2 hover:bg-violet-600 cursor-pointer hover:font-semibold">
-            <IoTicketOutline />{" "}
+            <HoverTooltip text="Bookings">
+              <IoTicketOutline />
+            </HoverTooltip>
             <span className={isOpen ? "block" : "hidden"}>Bookings</span>
           </li>
           <li className="p-2 rounded flex items-center gap-2 hover:bg-violet-600 cursor-pointer hover:font-semibold">
-            <IoCalendarOutline />{" "}
+            <HoverTooltip text="Calendar">
+              <IoCalendarOutline />
+            </HoverTooltip>
             <span className={isOpen ? "block" : "hidden"}>Calendar</span>
           </li>
         </ul>
@@ -68,11 +81,15 @@ export const Sidebar = ({ isOpen, toggleSidebar }) => {
       <div className="mt-auto">
         {/* Settings & Help */}
         <div className="p-2 rounded flex items-center gap-2 hover:bg-violet-600 cursor-pointer text-sm">
-          <IoSettingsOutline />{" "}
+          <HoverTooltip text="Settings">
+            <IoSettingsOutline />
+          </HoverTooltip>
           <span className={isOpen ? "block" : "hidden"}>Settings</span>
         </div>
         <div className="p-2 rounded flex items-center gap-2 hover:bg-violet-600 cursor-pointer text-sm">
-          <MdOutlineHelpOutline />{" "}
+          <HoverTooltip text="Help">
+            <MdOutlineHelpOutline />
+          </HoverTooltip>
           <span className={isOpen ? "block" : "hidden"}>Get Help</span>
         </div>
 
