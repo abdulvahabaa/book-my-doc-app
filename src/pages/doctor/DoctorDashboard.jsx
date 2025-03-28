@@ -2,14 +2,21 @@ import React from "react";
 import { PiChartLineUp } from "react-icons/pi";
 import DashboardLayout from "@/layouts/DashboardLayout";
 import Card from "@/components/ui/Card";
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+import {
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 
-const data = Array.from({ length: 30 }, (_, i) => ({
-  name: `Day ${i + 1}`,
-  visitors: Math.floor(Math.random() * 500) + 100,
+const data = Array.from({ length: 90 }, (_, i) => ({
+  name: `Apr ${i + 1}`,
+  visitors: Math.floor(Math.random() * 700) + 100,
   bookings: Math.floor(Math.random() * 300) + 50,
 }));
-
 
 const DoctorDashboard = () => {
   const cards = [
@@ -41,7 +48,7 @@ const DoctorDashboard = () => {
 
   return (
     <DashboardLayout>
-      <div>
+      <div className="">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
           {cards.map((card, index) => (
             <Card key={index} className="p-5 shadow-md rounded-lg bg-white">
@@ -71,25 +78,63 @@ const DoctorDashboard = () => {
               <p className="text-sm ">Total Visiors and Bookings count</p>
             </div>
             <div className="flex space-x-2">
-              <button className="btn-sm bg-gray-200 px-3 py-1 rounded">Last 3 months</button>
-              <button className="btn-sm bg-gray-200 px-3 py-1 rounded">Last 30 days</button>
-              <button className="btn-sm bg-gray-200 px-3 py-1 rounded">Last 7 days</button>
+              <button className="btn-sm bg-gray-200 px-3 py-1 rounded">
+                Last 3 months
+              </button>
+              <button className="btn-sm bg-gray-200 px-3 py-1 rounded">
+                Last 30 days
+              </button>
+              <button className="btn-sm bg-gray-200 px-3 py-1 rounded">
+                Last 7 days
+              </button>
             </div>
           </div>
-          <div className="h-45">{/* chart goes here */}
-          <ResponsiveContainer width="100%" height="100%">
-              <AreaChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-                <CartesianGrid stroke="#ddd" strokeDasharray="0" vertical={false} />
+          <div className="h-35">
+            {/* chart goes here */}
+            <ResponsiveContainer width="100%" height="100%">
+              <AreaChart
+                data={data}
+                margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+              >
+                <CartesianGrid
+                  stroke="#ddd"
+                  strokeDasharray="0"
+                  vertical={false}
+                />
                 <XAxis dataKey="name" stroke="#555" />
                 <Tooltip />
-                <Area type="monotone" dataKey="visitors" stroke="#2B6CB0" strokeWidth={1.5} fill="url(#colorVisitors)" />
-                <Area type="monotone" dataKey="bookings" stroke="#1E8449" strokeWidth={1.5} fill="url(#colorBookings)" />
+                <Area
+                  type="monotone"
+                  dataKey="visitors"
+                  stroke="#2B6CB0"
+                  strokeWidth={1.5}
+                  fill="url(#colorVisitors)"
+                />
+                <Area
+                  type="monotone"
+                  dataKey="bookings"
+                  stroke="#1E8449"
+                  strokeWidth={1.5}
+                  fill="url(#colorBookings)"
+                />
                 <defs>
-                  <linearGradient id="colorVisitors" x1="0" y1="0" x2="0" y2="1">
+                  <linearGradient
+                    id="colorVisitors"
+                    x1="0"
+                    y1="0"
+                    x2="0"
+                    y2="1"
+                  >
                     <stop offset="10%" stopColor="#2B6CB0" stopOpacity={0.9} />
                     <stop offset="95%" stopColor="#2B6CB0" stopOpacity={0.3} />
                   </linearGradient>
-                  <linearGradient id="colorBookings" x1="0" y1="0" x2="0" y2="1">
+                  <linearGradient
+                    id="colorBookings"
+                    x1="0"
+                    y1="0"
+                    x2="0"
+                    y2="1"
+                  >
                     <stop offset="10%" stopColor="#1E8449" stopOpacity={0.9} />
                     <stop offset="95%" stopColor="#1E8449" stopOpacity={0.3} />
                   </linearGradient>
@@ -98,6 +143,20 @@ const DoctorDashboard = () => {
             </ResponsiveContainer>
           </div>
         </Card>
+      </div>
+      <div className="mt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-4">
+          <Card>
+            <div>
+              <p>Bookings</p>
+            </div>
+          </Card>
+          <Card>
+            <div>
+              <p>Bookings</p>
+            </div>
+          </Card>
+        </div>
       </div>
     </DashboardLayout>
   );

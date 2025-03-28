@@ -19,7 +19,7 @@ const DashboardLayout = ({ children }) => {
         <Navbar toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
 
         {/* Scrollable Main Content */}
-        <main className={`p-2 overflow-y-auto mx-2 h-[calc(100vh-4rem)]`}>
+        <main className={` mt-1 p-2 overflow-y-auto mx-2 h-[calc(100vh-4rem)]`}>
           {children}
         </main>
       </div>
