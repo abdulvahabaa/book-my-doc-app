@@ -7,6 +7,7 @@ import NotFound from "./pages/common/NotFound";
 // import ProtectedRoute from "./routes/ProtectedRoute";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import AdminRoutes from "./routes/AdminRoutes";
 
 
 const App = () => {
@@ -21,9 +22,9 @@ const App = () => {
         <Route path="/doctor/*" element={<DoctorRoutes />} />
         {/* </Route> */}
 
-        {/* <Route element={<ProtectedRoute allowedRoles={['admin']} />}>
+        {/* <Route element={<ProtectedRoute allowedRoles={['admin']} />}> */}
           <Route path="/admin/*" element={<AdminRoutes />} />
-        </Route> */}
+        {/* </Route> */}
 
         {/* Catch-All Route for 404 Not Found */}
         <Route path="*" element={<NotFound />} />

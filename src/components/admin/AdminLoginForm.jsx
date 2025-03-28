@@ -1,7 +1,7 @@
 import React from "react";
 import { FcGoogle } from "react-icons/fc";
 
-export function LoginForm({ className, ...props }) {
+export function AdminLoginForm({ className, ...props }) {
   return (
     <div className={`flex flex-col gap-6 ${className}`} {...props}>
       <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
@@ -11,7 +11,7 @@ export function LoginForm({ className, ...props }) {
               {/* Heading */}
               <div className="flex flex-col items-center text-center">
                 <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-                  Welcome back Doctor
+                  Welcome back Admin
                 </h1>
                 <p className="text-gray-500 dark:text-gray-400">
                   Login to your account
@@ -29,7 +29,7 @@ export function LoginForm({ className, ...props }) {
                 <input
                   id="email"
                   type="email"
-                  placeholder="doctor@example.com"
+                  placeholder="admin@example.com"
                   required
                   className="w-full p-2 border rounded-md bg-gray-100 dark:bg-gray-800 dark:text-white focus:ring-2 focus:ring-blue-500"
                 />
@@ -71,34 +71,10 @@ export function LoginForm({ className, ...props }) {
                 </span>
               </div>
 
-              {/* Social Login Buttons */}
-              {/* <div className="grid grid-cols-3 gap-4">
-                <button className="w-full p-2 border rounded-md bg-gray-100 dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700">
-                  🍎
-                  <span className="sr-only">Login with Apple</span>
-                </button>
-                <button className="w-full p-2 border rounded-md bg-gray-100 dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700">
-                  🔵
-                  <span className="sr-only">Login with Google</span>
-                </button>
-                <button className="w-full p-2 border rounded-md bg-gray-100 dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700">
-                  🔗
-                  <span className="sr-only">Login with Meta</span>
-                </button>
-              </div> */}
-
               <div className="space-y-3">
                 <button className="w-full flex items-center justify-center gap-2 py-2 border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition dark:text-white">
                   <FcGoogle size={20} /> Continue with Google
                 </button>
-              </div>
-
-              {/* Sign Up Link */}
-              <div className="text-center text-sm text-gray-600 dark:text-gray-400">
-                Don’t have an account?{" "}
-                <a href="#" className="text-blue-500 hover:underline">
-                  Sign up
-                </a>
               </div>
             </div>
           </form>
@@ -106,33 +82,14 @@ export function LoginForm({ className, ...props }) {
           {/* Image Section (Hidden on Small Screens) */}
           <div className="relative hidden bg-gray-100 dark:bg-gray-800 md:block">
             <img
-              src="/images/doctor-panel.png"
-              alt="Image"
+              src="/images/admin.png"
               className="absolute inset-0 h-full w-full object-cover dark:opacity-50"
             />
-            {/* <img
-              src="/images/doctor-symbol.jpg"
-              alt="Image"
-              className="object-contain rounded-lg shadow-md dark:opacity-80 w-full h-full"
-            /> */}
           </div>
         </div>
-      </div>
-
-      {/* Terms and Conditions */}
-      <div className="text-center text-xs text-gray-500 dark:text-gray-400">
-        By clicking continue, you agree to our{" "}
-        <a href="#" className="text-blue-500 hover:underline">
-          Terms of Service
-        </a>{" "}
-        and{" "}
-        <a href="#" className="text-blue-500 hover:underline">
-          Privacy Policy
-        </a>
-        .
       </div>
     </div>
   );
 }
 
-export default LoginForm;
+export default AdminLoginForm;
