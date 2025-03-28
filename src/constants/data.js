@@ -350,3 +350,36 @@ export const experienceOptions = [
   "6-10 years",
   "10+ years",
 ];
+
+export const DoctorAreaChartdata = Array.from({ length: 90 }, (_, i) => ({
+  name: `Apr ${i + 1}`,
+  visitors: Math.floor(Math.random() * 700) + 100,
+  bookings: Math.floor(Math.random() * 300) + 50,
+}));
+
+export const doctorDashCards = [
+  {
+    title: "Revenue",
+    value: "$12,000.00",
+    description: "Trending up this month",
+    subtext: "Visitors for the last 6 months",
+  },
+  {
+    title: "Appointments",
+    value: "120",
+    description: "Scheduled this month",
+    subtext: "Compared to last month",
+  },
+  {
+    title: "Patients",
+    value: "3,200",
+    description: "Total registered",
+    subtext: "Active patients in records",
+  },
+  {
+    title: "Reviews",
+    value: "4.8/5",
+    description: "Based on patient feedback",
+    subtext: "Average rating",
+  },
+];

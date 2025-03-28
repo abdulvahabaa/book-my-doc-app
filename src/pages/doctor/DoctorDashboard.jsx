@@ -2,55 +2,16 @@ import React from "react";
 import { PiChartLineUp } from "react-icons/pi";
 import DashboardLayout from "@/layouts/DashboardLayout";
 import Card from "@/components/ui/Card";
-import {
-  AreaChart,
-  Area,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-} from "recharts";
 
-const data = Array.from({ length: 90 }, (_, i) => ({
-  name: `Apr ${i + 1}`,
-  visitors: Math.floor(Math.random() * 700) + 100,
-  bookings: Math.floor(Math.random() * 300) + 50,
-}));
+import { DoctorAreaChartdata, doctorDashCards } from "@/constants/data";
+import AreaChartComponent from "@/components/ui/AreaChartComponent";
 
 const DoctorDashboard = () => {
-  const cards = [
-    {
-      title: "Revenue",
-      value: "$12,000.00",
-      description: "Trending up this month",
-      subtext: "Visitors for the last 6 months",
-    },
-    {
-      title: "Appointments",
-      value: "120",
-      description: "Scheduled this month",
-      subtext: "Compared to last month",
-    },
-    {
-      title: "Patients",
-      value: "3,200",
-      description: "Total registered",
-      subtext: "Active patients in records",
-    },
-    {
-      title: "Reviews",
-      value: "4.8/5",
-      description: "Based on patient feedback",
-      subtext: "Average rating",
-    },
-  ];
-
   return (
     <DashboardLayout>
       <div className="">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-          {cards.map((card, index) => (
+          {doctorDashCards.map((card, index) => (
             <Card key={index} className="p-5 shadow-md rounded-lg bg-white">
               <div className="flex items-center justify-between mb-2">
                 <p className="text-sm font-medium text-gray-600">
@@ -91,56 +52,11 @@ const DoctorDashboard = () => {
           </div>
           <div className="h-35">
             {/* chart goes here */}
-            <ResponsiveContainer width="100%" height="100%">
-              <AreaChart
-                data={data}
-                margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
-              >
-                <CartesianGrid
-                  stroke="#ddd"
-                  strokeDasharray="0"
-                  vertical={false}
-                />
-                <XAxis dataKey="name" stroke="#555" />
-                <Tooltip />
-                <Area
-                  type="monotone"
-                  dataKey="visitors"
-                  stroke="#2B6CB0"
-                  strokeWidth={1.5}
-                  fill="url(#colorVisitors)"
-                />
-                <Area
-                  type="monotone"
-                  dataKey="bookings"
-                  stroke="#1E8449"
-                  strokeWidth={1.5}
-                  fill="url(#colorBookings)"
-                />
-                <defs>
-                  <linearGradient
-                    id="colorVisitors"
-                    x1="0"
-                    y1="0"
-                    x2="0"
-                    y2="1"
-                  >
-                    <stop offset="10%" stopColor="#2B6CB0" stopOpacity={0.9} />
-                    <stop offset="95%" stopColor="#2B6CB0" stopOpacity={0.3} />
-                  </linearGradient>
-                  <linearGradient
-                    id="colorBookings"
-                    x1="0"
-                    y1="0"
-                    x2="0"
-                    y2="1"
-                  >
-                    <stop offset="10%" stopColor="#1E8449" stopOpacity={0.9} />
-                    <stop offset="95%" stopColor="#1E8449" stopOpacity={0.3} />
-                  </linearGradient>
-                </defs>
-              </AreaChart>
-            </ResponsiveContainer>
+            <AreaChartComponent
+              data={DoctorAreaChartdata}
+              dataKeys={["visitors", "bookings"]}
+              colors={["#2B6CB0", "#1E8449"]}
+            />
           </div>
         </Card>
       </div>
