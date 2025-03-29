@@ -9,7 +9,6 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AdminRoutes from "./routes/AdminRoutes";
 
-
 const App = () => {
   return (
     <Router>
@@ -23,7 +22,7 @@ const App = () => {
         {/* </Route> */}
 
         {/* <Route element={<ProtectedRoute allowedRoles={['admin']} />}> */}
-          <Route path="/admin/*" element={<AdminRoutes />} />
+        <Route path="/admin/*" element={<AdminRoutes />} />
         {/* </Route> */}
 
         {/* Catch-All Route for 404 Not Found */}

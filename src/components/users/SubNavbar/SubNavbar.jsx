@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
 const SubNavbar = () => {
   const categories = [
-    { name: 'Doctors', link: '#' },
-    { name: 'Hospitals', link: '#' },
-    { name: 'Clinics', link: '#' },
-    { name: 'Departments', link: '#' },
-    { name: 'Services', link: '#' },
-    { name: 'Offers', link: '#' },
+    { name: "Doctors", link: "#" },
+    { name: "Hospitals", link: "#" },
+    { name: "Clinics", link: "#" },
+    { name: "Departments", link: "#" },
+    { name: "Services", link: "#" },
+    { name: "Offers", link: "#" },
   ];
 
   return (
@@ -28,13 +28,22 @@ const SubNavbar = () => {
 
         {/* Right Side - only visible on md and larger screens */}
         <div className="hidden md:flex space-x-4">
-          <a href="#" className="text-gray-700 dark:text-white text-xs hover:text-amber-500 transition">
+          <a
+            href="#"
+            className="text-gray-700 dark:text-white text-xs hover:text-amber-500 transition"
+          >
             List my Account
           </a>
-          <a href="#" className="text-gray-700 dark:text-white text-xs hover:text-amber-500 transition">
+          <a
+            href="#"
+            className="text-gray-700 dark:text-white text-xs hover:text-amber-500 transition"
+          >
             List Hospital
           </a>
-          <a href="#" className="text-gray-700 dark:text-white text-xs hover:text-amber-500 transition">
+          <a
+            href="#"
+            className="text-gray-700 dark:text-white text-xs hover:text-amber-500 transition"
+          >
             List Clinic
           </a>
         </div>

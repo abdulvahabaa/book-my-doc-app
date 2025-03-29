@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Sidebar } from "@/components/ui/DashSidebar";
 import { Navbar } from "@/components/ui/DashNavbar";
 
-const DashboardLayout = ({ children }) => {
+const DoctorLayout = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   return (
@@ -27,4 +27,4 @@ const DashboardLayout = ({ children }) => {
   );
 };
 
-export default DashboardLayout;
+export default DoctorLayout;

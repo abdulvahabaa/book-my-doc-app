@@ -6,23 +6,29 @@ import DoctorAuth from "@/pages/doctor/DoctorAuth";
 import DoctorAnalytics from "@/pages/doctor/DoctorAnalytics";
 import NotFound from "@/pages/common/NotFound";
 import DoctorBookings from "@/pages/doctor/DoctorBookings";
-// import Appointments from "../pages/doctors/Appointments";
-// import PatientsList from "../pages/doctors/PatientsList";
+import DoctorLayout from "@/layouts/DoctorLayout";
 
 const DoctorRoutes = () => {
   return (
-    // <DoctorLayout>
     <Routes>
+      {/* Auth Route - Without Layout */}
       <Route path="/" element={<DoctorAuth />} />
-      <Route path="/dashboard" element={<DoctorDashboard />} />
-      <Route path="/analytics" element={<DoctorAnalytics />} />
-      <Route path="/bookings" element={<DoctorBookings />} />
-      {/* <Route path="/appointments" element={<Appointments />} />
-        <Route path="/patients" element={<PatientsList />} /> */}
 
-      <Route path="*" element={<NotFound />} />
+      {/* Protected Routes - Wrapped in Layout */}
+      <Route
+        path="/*"
+        element={
+          <DoctorLayout>
+            <Routes>
+              <Route path="dashboard" element={<DoctorDashboard />} />
+              <Route path="analytics" element={<DoctorAnalytics />} />
+              <Route path="bookings" element={<DoctorBookings />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </DoctorLayout>
+        }
+      />
     </Routes>
-    //  </DoctorLayout>
   );
 };
 

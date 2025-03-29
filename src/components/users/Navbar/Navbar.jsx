@@ -17,7 +17,9 @@ const Navbar = () => {
           <div className="flex items-center space-x-4 flex-grow">
             <div className="flex items-center space-x-2 whitespace-nowrap">
               <GiStethoscope className="text-3xl text-amber-500" />
-              <h1 className="text-xl font-bold text-gray-800 dark:text-white">Book My Doc</h1>
+              <h1 className="text-xl font-bold text-gray-800 dark:text-white">
+                Book My Doc
+              </h1>
             </div>
             {/* Search Bar */}
             <div className="relative w-1/2 md:w-2/3">
@@ -51,10 +53,9 @@ const Navbar = () => {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75"></span>
                 <span className="relative inline-flex size-3 rounded-full bg-red-500"></span>
               </span>
-              
             </div>
 
-              <ThemeToggle/>
+            <ThemeToggle />
             {/* User Profile Icon */}
             <FaUserCircle className="text-3xl cursor-pointer text-gray-800 dark:text-white" />
 

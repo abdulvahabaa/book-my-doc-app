@@ -351,7 +351,7 @@ export const experienceOptions = [
   "10+ years",
 ];
 
-export const DoctorAreaChartdata = Array.from({ length: 90 }, (_, i) => ({
+export const DoctorAreaChartdata = Array.from({ length: 30 }, (_, i) => ({
   name: `Apr ${i + 1}`,
   visitors: Math.floor(Math.random() * 700) + 100,
   bookings: Math.floor(Math.random() * 300) + 50,
