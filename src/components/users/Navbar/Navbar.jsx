@@ -3,7 +3,7 @@ import AuthModal from "../../common/AuthModal/AuthModal";
 import { GiStethoscope } from "react-icons/gi";
 import { FcSearch } from "react-icons/fc";
 import { FaRegHeart, FaUserCircle } from "react-icons/fa";
-import ThemeToggle from "@/components/ui/ThemeToggle";
+// import ThemeToggle from "@/components/ui/ThemeToggle";
 
 const Navbar = () => {
   const [location, setLocation] = useState("Thrissur");
@@ -55,7 +55,8 @@ const Navbar = () => {
               </span>
             </div>
 
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
+
             {/* User Profile Icon */}
             <FaUserCircle className="text-3xl cursor-pointer text-gray-800 dark:text-white" />
 
