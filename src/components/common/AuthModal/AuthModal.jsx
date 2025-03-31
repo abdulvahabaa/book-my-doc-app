@@ -12,7 +12,7 @@ const AuthModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
-    fullName: "",
+    name: "",
   });
   const [loading, setLoading] = useState(false);
 
@@ -69,7 +69,7 @@ const AuthModal = ({ isOpen, onClose }) => {
           {!isLogin && (
             <input
               type="text"
-              name="fullName"
+              name="name"
               placeholder="Full Name"
               className="w-full px-4 py-2 border rounded-lg outline-none dark:bg-gray-800 dark:text-white"
               onChange={handleChange}

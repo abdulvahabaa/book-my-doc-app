@@ -11,7 +11,7 @@ export async function loginUser(credentials) {
 
 export async function registerUser(data) {
   try {
-    return await apiRequest("/auth/register", "POST", data);
+    return await apiRequest("/users/signup", "POST", data);
   } catch (error) {
     throw new Error(error.message || "Registration failed!");
   }
