@@ -5,9 +5,12 @@ import { FcGoogle } from "react-icons/fc";
 import { HiOutlineMail } from "react-icons/hi";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { registerUser, loginUser } from "@/api/auth";
+import { registerUser, loginUser } from "@/api/authApis";
+import { setLogin } from "@/redux/slices/userSlice";
+import { useDispatch } from "react-redux";
 
 const AuthModal = ({ isOpen, onClose }) => {
+  const dispatch = useDispatch();
   const [isLogin, setIsLogin] = useState(true);
   const [formData, setFormData] = useState({
     email: "",
@@ -28,8 +31,23 @@ const AuthModal = ({ isOpen, onClose }) => {
 
     try {
       if (isLogin) {
-        await loginUser({ email: formData.email, password: formData.password });
-        toast.success("Login successful!");
+        const response = await loginUser({
+          email: formData.email,
+          password: formData.password,
+        });
+        console.log(response);
+        if (response.token && response.user) {
+          dispatch(
+            setLogin({
+              user: response.user,
+              token: response.token,
+              role: response.user.role,
+            })
+          );
+          toast.success("Login successful!");
+        } else {
+          toast.error("Login failed!");
+        }
       } else {
         await registerUser(formData);
         toast.success("Registration successful! You can now log in.");

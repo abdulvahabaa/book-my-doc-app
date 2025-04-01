@@ -6,6 +6,7 @@ import DoctorsPage from "../pages/users/DoctorsPage";
 import DoctorProfilePage from "../pages/users/DoctorProfilePage";
 import BookingPage from "../pages/users/BookingPage";
 import NotFound from "../pages/common/NotFound";
+import DoctorBookingPage from "@/pages/users/DoctorBookingPage";
 
 const UserRoutes = () => {
   return (
@@ -14,7 +15,8 @@ const UserRoutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="/doctors" element={<DoctorsPage />} />
       <Route path="/doctors/profile" element={<DoctorProfilePage />} />
-      <Route path="/doctors/profile/book" element={<BookingPage />} />
+      <Route path="/doctors/profile/slot" element={<DoctorBookingPage />} />
+      <Route path="/doctors/profile/slot/book" element={<BookingPage />} />
 
       {/* Catch-All Route for Invalid User Routes */}
       <Route path="*" element={<NotFound />} />

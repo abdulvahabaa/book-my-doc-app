@@ -71,22 +71,6 @@ export function LoginForm({ className, ...props }) {
                 </span>
               </div>
 
-              {/* Social Login Buttons */}
-              {/* <div className="grid grid-cols-3 gap-4">
-                <button className="w-full p-2 border rounded-md bg-gray-100 dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700">
-                  🍎
-                  <span className="sr-only">Login with Apple</span>
-                </button>
-                <button className="w-full p-2 border rounded-md bg-gray-100 dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700">
-                  🔵
-                  <span className="sr-only">Login with Google</span>
-                </button>
-                <button className="w-full p-2 border rounded-md bg-gray-100 dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700">
-                  🔗
-                  <span className="sr-only">Login with Meta</span>
-                </button>
-              </div> */}
-
               <div className="space-y-3">
                 <button className="w-full flex items-center justify-center gap-2 py-2 border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition dark:text-white">
                   <FcGoogle size={20} /> Continue with Google
