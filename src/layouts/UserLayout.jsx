@@ -9,7 +9,7 @@ const UserLayout = ({ children }) => {
       {/* Top Navigation Bar */}
       <header>
         <Navbar />
-        <div className="pt-14">
+        <div className="pt-13">
           <SubNavbar />
         </div>
       </header>
